@@ -14,7 +14,7 @@ Install webp converter
 ## 2) Webp images folder
 Create a new folder for webp images in your actual prestashop root folder
 
-   `sudo mkdir imgwebp` 
+    sudo mkdir imgwebp 
 
 Copy your .htaccess from your standard images folder
 
