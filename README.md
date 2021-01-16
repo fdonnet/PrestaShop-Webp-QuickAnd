@@ -11,20 +11,20 @@ Install webp converter
 
 
 ## 2) Webp images folder
-Create a new folder for webp images in your actual prestashop
+Create a new folder for webp images in your actual prestashop root folder
 
-   `sudo mkdir /yourprestawebsitefolder/imgwebp` 
+   `sudo mkdir imgwebp` 
 
 Copy your .htaccess from your standard images folder
 
-    sudo cp /yourprestawebsitefolder/img/.htaccess /yourprestawebsitefolder/imgwebp
+    sudo cp img/.htaccess imgwebp/
 
 
 ## 2) Modify and use the bash script   
-Modify the config (path etc) in the script depending of your system => change webp quality param if needed and run it 
+Modify the config (path etc) in the script depending of your system. Change webp quality param if needed and run it 
 
     ./prestawebp.sh
    It will generate all your webp images in the new imgwebp folder.
 
-> Dirty bash script but it does the job...
+
 
