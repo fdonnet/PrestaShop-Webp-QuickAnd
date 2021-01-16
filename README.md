@@ -1,6 +1,7 @@
 # Prestashop - webp integration - Quick & ...
 
-Test it not in production... sudo in the commands below if you don't have permission on your presta website folder (owned by www-data).
+Test it, not in production... 
+sudo in the commands below, needed if you don't have the permission on your presta website folder (owned by www-data).
 
 ## 1) Linux (Ubuntu)
 
