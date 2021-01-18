@@ -34,7 +34,9 @@ You can define a cron job to run the script every night (maybe a root cron job).
 
 
 ## 4) Override the "generateHtaccess" method in class Tools.php
-Pls find an example file in override/classes folder, but adapt to your shop, the goal is to duplicate the lines with .jpg rules for .webp ones (drive the rewrite rules to your new webp folder imgwebp)
+Pls find an example file in override/classes folder, but pls adapt to your shop. 
+
+The goal is to locate the lines with .jpg rules and duplicate for .webp ones (drive the rewrite rules to your new webp folder imgwebp)
 
 Example :
 
