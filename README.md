@@ -68,6 +68,8 @@ With html picture tag you have a fallback if the visitor browser is not able to 
 ## 6) Change you templates (.tpl) to use webp if available
 Very easy... Go in your templates folder in your theme (ex: catalog/_partials/miniatures/product.tpl) and allow webp with picture tag and add a call to the 404 fallback in case of error.
 
+|replace:'.jpg':'.webp' => with only that instruction in the webp srcset it will works : your new .htaccess rules (see point 4) will take care of the rest.
+
 Just an example :
 
     <picture>
