@@ -36,7 +36,8 @@ You can define a cron job to run the script every night. ()
 ## 4) Override the "generateHtaccess" method in class Tools.php
 Pls find an example file in override/classes folder, but adapt to your shop, the goal is to duplicate the lines with .jpg rules and .webp ones (drive the rewrite to your new webp folder imgwebp)
 
-Example : 
+Example :
+ 
     fwrite($write_fd, $media_domains);
     fwrite($write_fd, $domain_rewrite_cond);
     fwrite($write_fd, 'RewriteRule ^([a-z0-9]+)\-([a-z0-9]+)(\-[_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1-$2$3$4.jpg [L]' . PHP_EOL);
