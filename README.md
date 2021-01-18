@@ -21,6 +21,10 @@ Copy your .htaccess from your standard images folder
 
     sudo cp img/.htaccess imgwebp/
 
+Add webp support in the new .htaccess in your imgweb folder (modify this line for Apache 2.2 and 2.4)
+
+    <Files ~ "(?i)^.*\.(jpg|jpeg|gif|png|bmp|tiff|svg|pdf|mov|mpeg|mp4|avi|mpg|wma|flv|webm|ico|webp)$">
+
 
 ## 3) Modify and use the bash script   
 Modify the config (path etc) in the script prestawebp.sh depending on your system. Change webp quality param if needed and run it 
