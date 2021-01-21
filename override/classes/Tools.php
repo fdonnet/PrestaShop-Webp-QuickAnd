@@ -246,10 +246,12 @@ class Tools extends ToolsCore
         fwrite($write_fd, "AddType font/otf .otf\n");
         fwrite($write_fd, "AddType application/font-woff .woff\n");
         fwrite($write_fd, "AddType font/woff2 .woff2\n");
+        fwrite($write_fd, "AddType image/webp .webp\n");
         fwrite($write_fd, "<IfModule mod_headers.c>
-	<FilesMatch \"\.(ttf|ttc|otf|eot|woff|woff2|svg)$\">
-		Header set Access-Control-Allow-Origin \"*\"
-	</FilesMatch>
+	<FilesMatch \"\.(ttf|ttc|otf|eot|woff|woff2|svg|webp)$\">
+        Header set Access-Control-Allow-Origin \"*\"
+        Header set Cache-Control \"max-age=2592000, public\"
+    </FilesMatch>
 </IfModule>\n\n");
 
         // Cache control
@@ -257,7 +259,8 @@ class Tools extends ToolsCore
             $cache_control = "<IfModule mod_expires.c>
 	ExpiresActive On
 	ExpiresByType image/gif \"access plus 1 month\"
-	ExpiresByType image/jpeg \"access plus 1 month\"
+    ExpiresByType image/jpeg \"access plus 1 month\"
+    ExpiresByType image/webp \"access plus 1 month\"
 	ExpiresByType image/png \"access plus 1 month\"
 	ExpiresByType text/css \"access plus 1 week\"
 	ExpiresByType text/javascript \"access plus 1 week\"
