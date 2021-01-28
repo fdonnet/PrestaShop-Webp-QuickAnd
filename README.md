@@ -32,7 +32,7 @@ Modify the config (path etc) in the script prestawebp.sh depending on your syste
     ./prestawebp.sh
    It will generate all your webp images in the new imgwebp folder.
 
-For the moment, the script will copy all our original images (no matter what) and run the convert tool only if the webp file doesn't exist... not very efficient... you can do better. At the end, it will rm the old files and keep only the webp in your imgwebp folder.
+Edit : with the new version 2021-01-28 => the script copies only the needed files. ~~For the moment, the script will copy all our original images (no matter what) and run the convert tool only if the webp file doesn't exist... not very efficient... you can do better.~~ At the end, it will rm the old files and keep only the webp in your imgwebp folder.
 
 You can define a cron job to run the script every night (maybe a root cron job).
 
@@ -55,7 +55,7 @@ To turn on the new rules => Go in your shop admin UI and desactivate and reactiv
 
 
 ## 5) Fallback for 404 on webp
-If you add new products and your webp image version in not ready yet. Put in place a protection to show the .jpg version. Script in js folder. See where you want to put this script (in your theme).
+If you add new products and your webp image version in not ready yet. Put in place a protection to show the .jpg version. Script in js folder. See where you want to put this script (in your theme or better, integreated in your theme.js).
 
     function onErrorImgWebp() {
     this.onerror = null;
